@@ -1,0 +1,25 @@
+<table>
+  <thead>
+    <tr>
+      <td>Id</td>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Street</td>
+      <td>City</td>
+    </tr>
+  </thead>
+  <tbody>
+    @for (contact of contacts; track $index) {
+    <tr>
+      <td>
+        <a routerLink="/contacts/{{ contact.id }}">{{ contact.id }}</a>
+      </td>
+      <td>{{ contact.firstName }}</td>
+      <td>{{ contact.lastName }}</td>
+      <td>{{ contact.street }}</td>
+      <td>{{ contact.city }}</td>
+      <button (click)="onClick(contact)">Edit</button>
+    </tr>
+    }
+  </tbody>
+</table>

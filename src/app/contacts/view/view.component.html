@@ -1,0 +1,12 @@
+@if (contact) {
+<div>
+  <h2>{{ contact.firstName }}</h2>
+  <p>{{ contact.lastName }}</p>
+  <p>Rating: {{ contact.street }}</p>
+  <p>Price: {{ contact.city }}</p>
+
+  <button routerLink="/contacts">Back to List</button>
+</div>
+}@else {
+<p>Loading contact details...</p>
+}
